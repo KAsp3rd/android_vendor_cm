@@ -1,4 +1,5 @@
 PRODUCT_BRAND ?= cyanogenmod
+GDATE= $(shell date '+%Y%m%d')
 
 -include vendor/cm-priv/keys.mk
 SUPERUSER_EMBEDDED := true
@@ -233,7 +234,10 @@ ifdef CM_BUILDTYPE
 else
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
     CM_BUILDTYPE := UNOFFICIAL
-    CM_EXTRAVERSION :=
+    CM_EXTRAVERSION := \
+    ro.goo.developerid=KAsp3rd \
+    ro.goo.rom=cm-10.2_unofficial \
+    ro.goo.version=$(GDATE)
 endif
 
 ifdef CM_RELEASE
