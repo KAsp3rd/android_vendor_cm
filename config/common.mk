@@ -235,6 +235,7 @@ else
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
     CM_BUILDTYPE := UNOFFICIAL
     CM_EXTRAVERSION :=
+  PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=KAsp3rd \
     ro.goo.rom=cm-10.2_unofficial \
     ro.goo.version=$(GDATE)
